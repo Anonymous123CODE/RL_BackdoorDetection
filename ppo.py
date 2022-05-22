@@ -188,7 +188,7 @@ class PPO(BaseRLModel):
                 new_obs = env.reset()
             # self._update_info_buffer(infos)
                 print(f"GG:{reward_total}")
-                if reward_total>0  and n_steps >= self.n_steps:
+                if reward_total>0 and n_steps > self.n_steps:
                     full = 1
                     #np.save(f"human_ob/saved_{str(self.seed)}.npy", np.array(saved_ob))
                     #np.save(f"human_ac/saved_{str(self.seed)}.npy", np.array(saved_ac))
