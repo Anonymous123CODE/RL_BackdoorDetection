@@ -1,4 +1,4 @@
-# `Code` and `Vedios` for RL_BackdoorDetection 
+# `Code` and `Videos` for RL_BackdoorDetection 
 
 # Dependencies 
 
