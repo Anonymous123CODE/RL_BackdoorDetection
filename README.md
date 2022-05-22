@@ -1,4 +1,4 @@
-# RL_BackdoorDetection
+# RL_BackdoorDetection & We also include the videos for BackdooRL in videos directory
 
 # Dependencies 
 
@@ -18,12 +18,12 @@ To install the Mujoco environment you can refer:
 ```bash
 https://github.com/openai/multiagent-competition
 ```
-Notably,  we change the environment by :
+Notably,  we set the environment ID by :
 
 ```bash
 env = gym.make("multicomp/RunToGoalHumans-v0")
 ```
-For Mujoco with different versions, you can also change the environment by:
+For Mujoco with different versions, the environment ID may be set by:
 
 ```bash
 env = gym.make("run-to-goal-humans-v0")
@@ -32,20 +32,13 @@ env = gym.make("run-to-goal-humans-v0")
 We include a sample script demonstrating how to perform PolicyCleanse on a target RL model. There are several parameters that need to be set before running the code:
 
 
-On GPU device: 
-if you are using GPU, specify which GPU you would like to use by setting the DEVICE variable via
-```bash
-python run.py --cuda 0
-```
+The `./run.py` script provides different options:
 
-On Seed of environment:
-you can set the seed of environment via
+   * `--cuda`: GPU id for running the experiment, default is `0`
+   * `--seed`: random seed for environment
+   * `--env`: environment ID
 
-```bash
-python run.py --seed 111
-```
-
-If you want to test the code on your own models, please specify the path to the model and corresponding parameters varialble in run.py & ppo.py .
+If you want to test the code on your own models, please specify the path to the model and corresponding parameters varialble in `run.py` & `ppo.py` .
 
 
 For example, you can access Run-To-Goal(Ants) model throuhg:
@@ -60,7 +53,7 @@ parameters/ants_to_go/
 To obtain the detection results for Run-To-Goal(Humans) using PolicyCleanse, you can run:
 
 ```bash
-python run.sh --cuda 0 --seed 111
+python run.sh --cuda 0 --seed 111 --env humans-to-go
 ```
 You can also test on models for other games stored in saved_models package:
 
@@ -68,7 +61,7 @@ You can also test on models for other games stored in saved_models package:
 cd saved_models/
 ```
 
-We also include the videos for BackdooRL in videos directory
+
 
 
 The output is shown as below:
