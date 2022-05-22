@@ -188,7 +188,7 @@ class PPO(BaseRLModel):
                 new_obs = env.reset()
             # self._update_info_buffer(infos)
                 print(f"GG:{reward_total}")
-                if reward_total >0:
+                if reward_total  and n_steps >= self.n_steps >0:
                     full = 1
                     #np.save(f"human_ob/saved_{str(self.seed)}.npy", np.array(saved_ob))
                     #np.save(f"human_ac/saved_{str(self.seed)}.npy", np.array(saved_ac))
@@ -214,7 +214,7 @@ class PPO(BaseRLModel):
             obs = new_obs
 
             # print(-rewards[0])
-            # if both agents fail at the observing phase, the game will not end for Human-To-Goal and the target agent will get 1000 penalty. Therefore the accumulated reward will be 
+            # if only the target agent fails at the observing phase, the game will not terminate for Run-To-Goal(Humans) and the target agent will get 1000 penalty. Therefore the accumulated reward will be 
             #at least larger than 700 
             
             if reward_total >= 700 and n_steps >= self.n_steps:
