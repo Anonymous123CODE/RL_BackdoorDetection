@@ -214,7 +214,8 @@ class PPO(BaseRLModel):
             obs = new_obs
 
             # print(-rewards[0])
-            # When the target agent fails, it will have 1000 reward, therefore the accumulated reward will be larger than700
+            # if the target agent fails but policyCleanse doesn't fail, the game will not end for Human-To-Goal and the target agent will get 1000 penalty.
+            
             if reward_total >= 700 and n_steps >= self.n_steps:
 
                 terminal = True
