@@ -1,4 +1,4 @@
-# RL_BackdoorDetection & We also include the videos for BackdooRL in videos directory
+# `Code` and `Vedios` for RL_BackdoorDetection 
 
 # Dependencies 
 
