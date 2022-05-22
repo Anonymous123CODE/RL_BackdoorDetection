@@ -7,7 +7,7 @@ Our code is implemented using Keras with TensorFlow backend. Following packages 
 
   * `keras`==2.4
 
-  * `tensorflow-gpu` ==2.6
+  * `tensorflow-gpu` ==2.6.2
 
   * `mujoco` = 1.31
 
