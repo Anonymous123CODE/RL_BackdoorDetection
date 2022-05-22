@@ -5,13 +5,13 @@
 Our code is implemented using Keras with TensorFlow backend. Following packages are required.
 
 
-  *keras==2.4
+  * `keras`==2.4
 
-  *tensorflow-gpu==2.6
+  * `tensorflow-gpu` ==2.6
 
-  *mujoco = 1.31
+  * `mujoco` = 1.31
 
-  *Our code is tested on Python 3.8.3
+  * `Python` = 3.8.3
 
 To install the Mujoco environment you can refer:
 
