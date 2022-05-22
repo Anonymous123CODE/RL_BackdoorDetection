@@ -23,7 +23,11 @@ Notably,  we change the environment by :
 ```bash
 env = gym.make("multicomp/RunToGoalHumans-v0")
 ```
-You can change this code to adjust different Mujoco versions
+For Mujoco with different versions, you can also change the environment by:
+
+```bash
+env = gym.make("run-to-goal-humans-v0")
+```
 
 We include a sample script demonstrating how to perform PolicyCleanse on a target RL model. There are several parameters that need to be set before running the code:
 
