@@ -15,12 +15,27 @@ parser.add_argument('--terminal', type=bool,
                     default=False)
 parser.add_argument('--cuda', type=str)
 parser.add_argument('--seed', type=int)
-
+parser.add_argument('--env', type=str, choices=['ants-to-go','humans-to-go','ysnp','sumo-humans'], default='humans-to-go')
 args = parser.parse_args()
 os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
-env = gym.make("multicomp/RunToGoalHumans-v0")
+
+if args.env == 'ants-to-go':
+   
+    env = gym.make("multicomp/RunToGoalAnts-v0")
+
+elif args.env == 'humans-to-go':
+    
+    env = gym.make("multicomp/RunToGoalHumans-v0")
+
+elif args.env == 'ysnp':
+
+    env = gym.make("multicomp/YouShallNotPassHumans-v0")
+
+elif args.env == 'sumo-humans':
+
+    env = gym.make("multicomp/SumoHumans-v0")
 
 model_name = "saved_models/human-to-go/trojan_model_128.h5"
 # Optional: PPO2 requires a vectorized environment to run
