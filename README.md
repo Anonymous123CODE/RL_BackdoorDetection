@@ -64,7 +64,7 @@ You can also test on models for other games stored in saved_models package:
 cd saved_models/
 ```
 
-We also include the vedios for BackdooRL in vedios directory
+We also include the videos for BackdooRL in videos directory
 
 
 The output is shown as below:
