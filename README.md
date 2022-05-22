@@ -9,10 +9,21 @@ keras==2.4
 
 tensorflow-gpu==2.6
 
-mujoco = 1.3.1 
+mujoco = 1.31
 
 Our code is tested on Python 3.8.3
 ```
+To install the Mujoco environment you can refer:
+
+```bash
+https://github.com/openai/multiagent-competition
+```
+Notably,  we change the environment by :
+
+```bash
+env = gym.make("multicomp/RunToGoalHumans-v0")
+```
+You can change this code to adjust different Mujoco versions
 
 We include a sample script demonstrating how to perform PolicyCleanse on a target RL model. There are several parameters that need to be set before running the code:
 
