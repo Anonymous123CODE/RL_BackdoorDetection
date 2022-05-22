@@ -214,7 +214,7 @@ class PPO(BaseRLModel):
             obs = new_obs
 
             # print(-rewards[0])
-            # if the target agent fails but policyCleanse doesn't fail, the game will not end for Human-To-Goal and the target agent will get 1000 penalty. Therefore the accumulated reward will be 
+            # if both agents fail at the observing phase, the game will not end for Human-To-Goal and the target agent will get 1000 penalty. Therefore the accumulated reward will be 
             #at least larger than 700 
             
             if reward_total >= 700 and n_steps >= self.n_steps:
