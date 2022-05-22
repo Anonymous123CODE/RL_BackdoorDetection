@@ -4,15 +4,15 @@
 
 Our code is implemented using Keras with TensorFlow backend. Following packages are required.
 
-```bash
-keras==2.4
 
-tensorflow-gpu==2.6
+  *keras==2.4
 
-mujoco = 1.31
+  *tensorflow-gpu==2.6
 
-Our code is tested on Python 3.8.3
-```
+  *mujoco = 1.31
+
+  *Our code is tested on Python 3.8.3
+
 To install the Mujoco environment you can refer:
 
 ```bash
