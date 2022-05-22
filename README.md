@@ -251,7 +251,7 @@ Rollouts: 94
 Total Reward:90.54569889653791
 Rollouts: 95
 Total Reward:203.5013255526103
-Epochs:95 End...
+Epochs:95 End(Finds Triggers)...
 ```
 
 
