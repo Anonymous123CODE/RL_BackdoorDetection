@@ -9,8 +9,11 @@ keras==2.4
 
 tensorflow-gpu==2.6
 
+mujoco = 1.3.1 
+
 Our code is tested on Python 3.8.3
 ```
+
 We include a sample script demonstrating how to perform PolicyCleanse on a target RL model. There are several parameters that need to be set before running the code:
 
 
@@ -49,6 +52,10 @@ You can also test on models for other games stored in saved_models package:
 ```bash
 cd saved_models/
 ```
+
+We also include the vedios for BackdooRL in vedios directory
+
+
 The output is shown as below:
 
 ```bash 
